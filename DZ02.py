@@ -1,12 +1,10 @@
 class Road:
+    weight = 8
+    thickness = 8
     def __init__(self, length, width):
-        self.length = length
-        self.width = width
-    def mass(self):
-        return self.length * self.width
-class MassCount(Road):
-    def __init__(self, length, width, volume):
-        super().__init__(length, width)
-        self.volume = volume
-r = MassCount(55, 5000, 145)
-print(r.mass())
+        self.__length = length
+        self.__width = width
+    def mass_calculation(self):
+        return self.__length * self.__width * self.weight * self.thickness
+a = Road(30000, 30)
+print(a.mass_calculation())
