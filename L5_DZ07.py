@@ -19,3 +19,11 @@ with open('file_7.txt', 'r') as file:
     pr = {'средняя прибыль': round(prof_aver)}
     profit.update(pr)
     print(f'Прибыль каждой компании - {profit}')
+
+    #добавил запись json
+    with open('file_7.json', 'w') as write_js:
+    json.dump(profit, write_js)
+
+    js_str = json.dumps(profit)
+    print(f'Создан файл с расширением json со следующим содержимым: \n '
+          f' {js_str}')
