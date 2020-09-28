@@ -1,12 +1,5 @@
-my_list = []
-while True:
-    line = input("Введите что угодно: ")
-    if line == '':
-        print(my_list)
-        exit()
-    else:
-        newline = line + '\n'
-        my_list.append(newline)
-
-    with open("test_1.txt", "w") as file_obj:
-        file_obj.writelines(my_list)
+with open('test_1.txt', 'w') as f:
+    test_1 = 1
+    while test_1:
+        test_1 = input('Введите строку текста: ')
+        f.write(f'{test_1}\n')
