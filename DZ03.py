@@ -8,8 +8,6 @@ class Worker:
 
 class Position(Worker):
 
-    def __init__(self, name, surname, position, wage, bonus):
-        super().__init__(name, surname, position, wage, bonus)
     def get_full_name(self):
         return self.name + ' ' + self.surname
     def get_total_income(self):
